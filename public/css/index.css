@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Neue', cursive;
+    background-color: #eaecef;
+}
+
+main {
+    justify-content: center;
+    display: grid;
+}
+
+.application-name {
+    text-align: center;
+}
+
+.weather-digest {
+    display: block;
+}
+
+.temp {
+    font-size: 30px;
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.enter-city-form {
+    text-align: center;
+}
+
+.city-name {
+    text-align: center;
+    margin-bottom: 7px;
+    font-size: 20px;
+}
+
+.secondaryInfo {
+    /*padding-left: 45px;*/
+}
+
+.air-components {
+    display: flex;
+}
+
+.air-component {
+    margin-left: 10px;
+}
+
+.aqi {
+    margin-top: 10px;
+}
+
+#map {
+    width: 350px;
+    height: 280px;
+    padding-top: 20px;
+    border-radius: 30px;
+}
+

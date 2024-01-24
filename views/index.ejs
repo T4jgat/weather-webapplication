@@ -1,0 +1,65 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <title>Weather Maps App</title>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=<%= YANDEX_API_KEY%>&lang=en_UK"></script>
+    <script src="/js/ymaps.js" onload="initMap(<%= weatherData.coord.lon%>, <%= weatherData.coord.lat%>)">
+    </script>
+</head>
+<body>
+<main>
+    <h1 class="application-name">Weather Maps App</h1>
+    <br>
+    <form action="/weather" method="get" class="menter-city-for">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    <br>
+    <div id="weatherInfo">
+        <div class="city-name"><%= weatherData.name%> (<%= weatherData.sys.country%>)</div>
+        <div class="metrics">
+            <div class="mainInfo">
+                <div class="weather-digest">
+                    <img style="height: 100px; width: 100px"
+                         src="https://openweathermap.org/img/wn/<%= weatherData.weather[0].icon %>@2x.png">
+                    <p class="temp"><%= Math.round(weatherData.main.temp)%> °C</p>
+
+                </div>
+                <div class="feels-like">Feels like: <%= weatherData.main.feels_like %> °C</div>
+                <div class="description"></div>
+            </div>
+            <div class="secondaryInfo">
+                <div class="coord">lon: <%= weatherData.coord.lon%> lat: <%= weatherData.coord.lat%></div>
+                <div class="humidity">Humidity: <%= weatherData.main.humidity%></div>
+                <div class="pressure">Pressure: <%= weatherData.main.pressure%></div>
+                <div class="wind-speed">Wind speed: <%= weatherData.wind.speed%> meter/sec</div>
+                <div class="aqi">AQI: <%= airPollutionData.list[0].main.aqi%></div>
+                <div class="air-components">
+                    <div class="components-row1">
+                        <div class="air-component">co: <%=airPollutionData.list[0].components.co%></div>
+                        <div class="air-component">no: <%=airPollutionData.list[0].components.no%></div>
+                        <div class="air-component">no2: <%=airPollutionData.list[0].components.no2%></div>
+                        <div class="air-component">o3: <%=airPollutionData.list[0].components.o3%></div>
+                    </div>
+                    <div class="components-row2">
+                        <div class="air-component">so2: <%=airPollutionData.list[0].components.so2%></div>
+                        <div class="air-component">pm2_5: <%=airPollutionData.list[0].components.pm2_5%></div>
+                        <div class="air-component">pm10: <%=airPollutionData.list[0].components.pm10%></div>
+                        <div class="air-component">n3: <%=airPollutionData.list[0].components.nh3%></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+</main>
+
+</body>
+</html>
