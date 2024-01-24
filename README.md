@@ -8,7 +8,7 @@ $ npm install
 ```
 $ npm start
 ```
-or
+or (nodemon)
 ```
 $ npm run dev
 ```
