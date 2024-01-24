@@ -13,7 +13,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname+ '/public'));
-app.use("/weather", router)
+app.use("/", router)
 
 app.get((req, res) => {
 

@@ -3,6 +3,7 @@ import weatherController from "../controllers/weatherController.js"
 
 const router = express.Router()
 
-router.get("/", await weatherController.getWeather)
+router.get("/weather", await weatherController.getWeather)
+router.get("/", await weatherController.homePage)
 
 export default router
