@@ -1,3 +1,5 @@
+"use strict";
+
 async function initMap(lon, lat) {
     await ymaps3.ready;
 

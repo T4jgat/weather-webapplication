@@ -10,23 +10,31 @@
 main {
     justify-content: center;
     display: grid;
+    margin-top: 6%;
 }
+
+
 
 .application-name {
     text-align: center;
 }
 
 .weather-digest {
+    padding-top: 12px;
     display: block;
 }
 
 .temp {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .metrics {
     display: flex;
     justify-content: space-between;
+    background-color: white;
+}
+
+.mainInfo {
     background-color: white;
 }
 
@@ -37,11 +45,18 @@ main {
 .city-name {
     text-align: center;
     margin-bottom: 7px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
-.secondaryInfo {
-    /*padding-left: 45px;*/
+.secondaryInfo,
+.data,
+#weatherInfo,
+.city-name,
+img,
+h3.temp,
+.feels-like,
+.weather-digest{
+    background-color: white;
 }
 
 .air-components {
@@ -59,7 +74,38 @@ main {
 #map {
     width: 350px;
     height: 280px;
-    padding-top: 20px;
+    margin-top: 20px;
     border-radius: 30px;
+
+}
+.ymaps3x0--map-container {
+    border-radius: 10px;
 }
 
+#weatherInfo {
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #444444,
+    -3px -3px 6px #ffffff;
+
+}
+
+.enter-city-form {
+    align-content: center;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px #444444,
+    -3px -3px 6px #ffffff;}
+
+input {
+    width: 90%;
+    padding: 10px 7px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 120%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    box-shadow: inset -3px -3px 6px #e8e8e8,
+    inset 2px 2px 5px #444444;
+}
