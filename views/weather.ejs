@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/css/index.css">
 
     <title>Weather Maps App</title>
-    <script src="https://api-maps.yandex.ru/v3/?apikey=<%= YANDEX_API_KEY%>&lang=en_UK"></script>
-    <script src="/js/ymaps.js" onload="initMap(<%= weatherData.coord.lon%>, <%= weatherData.coord.lat%>)">
+    <script src="https://api-maps.yandex.ru/v3/?apikey=<%= YANDEX_API_KEY %>&lang=en_UK"></script>
+    <script src="/js/ymaps.js" onload="initMap(<%= weatherData.coord.lon %>, <%= weatherData.coord.lat %>)">
     </script>
 </head>
 <body>
@@ -20,44 +20,43 @@
     </form>
     <br>
     <div id="weatherInfo">
-        <h3 class="city-name"><%= weatherData.name%> (<%= weatherData.sys.country%>)</h3>
+        <h3 class="city-name"><%= weatherData.name %> (<%= weatherData.sys.country %>)</h3>
         <div class="metrics">
             <div class="mainInfo">
                 <div class="weather-digest">
                     <img style="height: 100px; width: 100px"
                          src="https://openweathermap.org/img/wn/<%= weatherData.weather[0].icon %>@2x.png">
-                    <h3 class="temp"><%= Math.round(weatherData.main.temp)%> °C</h3>
+                    <h3 class="temp"><%= Math.round(weatherData.main.temp) %> °C</h3>
 
                 </div>
                 <div class="feels-like">Feels like: <%= Math.round(weatherData.main.feels_like) %> °C</div>
                 <div class="description"></div>
             </div>
             <div class="secondaryInfo">
-                <div class="data">lon: <%= weatherData.coord.lon%> lat: <%= weatherData.coord.lat%></div>
-                <div class="data">Humidity: <%= weatherData.main.humidity%></div>
-                <div class="data">Pressure: <%= weatherData.main.pressure%></div>
-                <div class="data">Wind speed: <%= weatherData.wind.speed%> meter/sec</div>
+                <div class="data">lon: <%= weatherData.coord.lon %> lat: <%= weatherData.coord.lat %></div>
+                <div class="data">Humidity: <%= weatherData.main.humidity %></div>
+                <div class="data">Pressure: <%= weatherData.main.pressure %></div>
+                <div class="data">Wind speed: <%= weatherData.wind.speed %> meter/sec</div>
                 <br>
-                <div class="data">AQI: <%= airPollutionData.list[0].main.aqi%></div>
+                <div class="data">AQI: <%= airPollutionData.list[0].main.aqi %></div>
                 <div class="air-components data">
                     <div class="components-row1 data">
-                        <div class="air-component data">co: <%=airPollutionData.list[0].components.co%></div>
-                        <div class="air-component data">no: <%=airPollutionData.list[0].components.no%></div>
-                        <div class="air-component data">no2: <%=airPollutionData.list[0].components.no2%></div>
-                        <div class="air-component data">o3: <%=airPollutionData.list[0].components.o3%></div>
+                        <div class="air-component data">co: <%= airPollutionData.list[0].components.co %></div>
+                        <div class="air-component data">no: <%= airPollutionData.list[0].components.no %></div>
+                        <div class="air-component data">no2: <%= airPollutionData.list[0].components.no2 %></div>
+                        <div class="air-component data">o3: <%= airPollutionData.list[0].components.o3 %></div>
                     </div>
                     <div class="components-row2 data">
-                        <div class="air-component data">so2: <%=airPollutionData.list[0].components.so2%></div>
-                        <div class="air-component data">pm2_5: <%=airPollutionData.list[0].components.pm2_5%></div>
-                        <div class="air-component data">pm10: <%=airPollutionData.list[0].components.pm10%></div>
-                        <div class="air-component data">n3: <%=airPollutionData.list[0].components.nh3%></div>
+                        <div class="air-component data">so2: <%= airPollutionData.list[0].components.so2 %></div>
+                        <div class="air-component data">pm2_5: <%= airPollutionData.list[0].components.pm2_5 %></div>
+                        <div class="air-component data">pm10: <%= airPollutionData.list[0].components.pm10 %></div>
+                        <div class="air-component data">n3: <%= airPollutionData.list[0].components.nh3 %></div>
                     </div>
                 </div>
             </div>
         </div>
 
-            <div id="map"></div>
-
+        <div id="map"></div>
     </div>
 </main>
 
