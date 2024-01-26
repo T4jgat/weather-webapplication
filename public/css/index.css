@@ -132,3 +132,13 @@ input {
 sub {
     background-color: white;
 }
+
+.footer {
+    font-size: 20px;
+    margin-top: 40px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
