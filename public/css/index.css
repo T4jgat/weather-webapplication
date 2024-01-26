@@ -14,7 +14,7 @@
 main {
     justify-content: center;
     display: grid;
-    margin-top: 5%;
+    margin-top: 1%;
     height: 150%;
     padding: 1%;
 }
@@ -79,6 +79,7 @@ h3.temp,
 /* Single Air Component Styles */
 .air-component {
     margin-left: 10px;
+    white-space: pre;
 }
 
 /* Air Quality Index Styles */
@@ -101,6 +102,7 @@ h3.temp,
 
 /* Weather Info Container Styles */
 #weatherInfo {
+
     padding: 30px;
     border-radius: 20px;
     box-shadow: 2px 2px 5px #444444, -3px -3px 6px #ffffff;
@@ -125,4 +127,8 @@ input {
     margin: 8px 0;
     box-sizing: border-box;
     box-shadow: inset -3px -3px 6px #e8e8e8, inset 2px 2px 5px #444444;
+}
+
+sub {
+    background-color: white;
 }

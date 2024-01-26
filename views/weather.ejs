@@ -20,7 +20,7 @@
     </form>
     <br>
     <div id="weatherInfo">
-        <h3 class="city-name"><%= weatherData.name %> (<%= weatherData.sys.country %>)</h3>
+        <h3 class="city-name"><%= weatherData.name %>, <%= weatherData.sys.country %></h3>
         <div class="metrics">
             <div class="mainInfo">
                 <div class="weather-digest">
@@ -41,22 +41,23 @@
                 <div class="data">AQI: <%= airPollutionData.list[0].main.aqi %></div>
                 <div class="air-components data">
                     <div class="components-row1 data">
-                        <div class="air-component data">co: <%= airPollutionData.list[0].components.co %></div>
-                        <div class="air-component data">no: <%= airPollutionData.list[0].components.no %></div>
-                        <div class="air-component data">no2: <%= airPollutionData.list[0].components.no2 %></div>
-                        <div class="air-component data">o3: <%= airPollutionData.list[0].components.o3 %></div>
+                        <div class="air-component data">CO: <%= airPollutionData.list[0].components.co %></div>
+                        <div class="air-component data">NO: <%= airPollutionData.list[0].components.no %></div>
+                        <div class="air-component data">NO<sub>2</sub>: <%= airPollutionData.list[0].components.no2 %></div>
+                        <div class="air-component data">O<sub>3</sub>: <%= airPollutionData.list[0].components.o3 %></div>
                     </div>
                     <div class="components-row2 data">
-                        <div class="air-component data">so2: <%= airPollutionData.list[0].components.so2 %></div>
-                        <div class="air-component data">pm2_5: <%= airPollutionData.list[0].components.pm2_5 %></div>
-                        <div class="air-component data">pm10: <%= airPollutionData.list[0].components.pm10 %></div>
-                        <div class="air-component data">n3: <%= airPollutionData.list[0].components.nh3 %></div>
+                        <div class="air-component data">SO<sub>2</sub>: <%= airPollutionData.list[0].components.so2 %></div>
+                        <div class="air-component data">PM<sub>2.5</sub>: <%= airPollutionData.list[0].components.pm2_5 %></div>
+                        <div class="air-component data">PM<sub>10</sub>: <%= airPollutionData.list[0].components.pm10 %></div>
+                        <div class="air-component data">N<sub>3</sub>: <%= airPollutionData.list[0].components.nh3 %></div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="map"></div>
+
     </div>
 </main>
 
